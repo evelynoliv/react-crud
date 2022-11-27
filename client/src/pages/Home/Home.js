@@ -1,12 +1,13 @@
 import React from 'react';
+import RegisterForm from '../../components/RegisterForm/RegisterForm';
 
 function Home() {
     return (
-<div>
-    HOME
-</div>
-    );
-  }
+
+    <RegisterForm/>
+
+    )
+  };
   
   export default Home;
   
