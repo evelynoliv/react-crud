@@ -1,28 +1,17 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <div className="app-cointainer">
-      <div className="register-container">
-        <h1>GATA STORE</h1>
-        <input
-          type="text" name="name"
-          placeholder="Name"
-          className="register-input"
-        />
-           <input
-          type="price" name="name"
-          placeholder="Price"
-          className="register-input"
-        />
-           <input
-          type="category" name="Category"
-          placeholder="Category"
-          className="register-input"
-        />
-        <button>Register</button>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+
+
+
+    </BrowserRouter>
   );
 }
 
