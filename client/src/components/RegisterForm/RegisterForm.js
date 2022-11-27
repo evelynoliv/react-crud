@@ -2,9 +2,9 @@ import "./RegisterForm.css"
 
 function RegisterForm() {
     return (
-      <div className="main-cointainer">
+   
         <div className="register-container">
-          <h1>GATA STORE</h1>
+          <h1 className="register-title">GATA STORE</h1>
           <input
             type="text" name="name"
             placeholder="Name"
@@ -20,9 +20,10 @@ function RegisterForm() {
             placeholder="Category"
             className="register-input"
           />
-          <button className="register-button">Register</button>
+          <button 
+          className="register-button">Register</button>
         </div>
-      </div>
+      
     );
   }
   
