@@ -1,4 +1,6 @@
-function Form() {
+import "./RegisterForm.css"
+
+function RegisterForm() {
     return (
       <div className="main-cointainer">
         <div className="register-container">
@@ -18,10 +20,10 @@ function Form() {
             placeholder="Category"
             className="register-input"
           />
-          <button>Register</button>
+          <button className="register-button">Register</button>
         </div>
       </div>
     );
   }
   
-  export default Form;
+  export default RegisterForm;
