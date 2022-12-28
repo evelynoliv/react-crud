@@ -20,7 +20,7 @@ function RegisterForm() {
   return (
 
     <div className="register-container">
-      <h1 className="register-title">GATA STORE</h1>
+      <h1 className="register-title">GATA</h1>
       <input
         type="text"
         name="name"
@@ -43,8 +43,8 @@ function RegisterForm() {
         onChange={handleAddValues}
       />
       <button
-        onClick={handleClickButton}
-        className="register-button">Register</button>
+        className="register-button"
+        onClick={handleClickButton}>Register</button>
     </div>
 
   );
