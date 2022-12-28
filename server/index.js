@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
+const cors = require("cors")
 const mysql = require("mysql");
+
+app.use(cors())
+app.use(express.json())
 
 const dataBase = mysql.createPool({
     host: "localhost",
@@ -9,18 +13,27 @@ const dataBase = mysql.createPool({
     database: "reactcrud",
 });
 
-app.get('/', (req, res) => {
-    let SQL =
-        "INSERT INTO gata (idgata, name, cost, category) VALUES ('001', 'Gata One', '1000', 'Lindeza')";
 
-    dataBase.query(SQL, (err, result) => {
+app.post("/register", (req, res) => {
+    const { name } = req.body;
+    const { cost } = req.body;
+    const { category } = req.body;
+
+    let SQL = "INSERT INTO gata (idgata, name, cost, category) VALUES (?, ?, ?)";
+
+    dataBase.query(SQL, [name, cost, category], (err, result) => {
         console.log(err, "ih deu erro")
     })
-});
+
+})
 
 
+//servidor
 app.listen(3001, () => {
-    console.log("server running")
+    console.log("tá funcionando aeee!")
 });
+
+
+
 
 
